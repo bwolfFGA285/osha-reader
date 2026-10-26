@@ -1,1 +1,47 @@
+name: Weekly OSHA update
 
+on:
+  schedule:
+    - cron: "30 11 * * 1"   # Mondays, about 7:30 AM Eastern
+  workflow_dispatch:        # lets you run it any time from the Actions tab
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh regulation text and check for new notices
+        run: python tools/update.py
+
+      - name: Save updated regulation text
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No text changes this week"
+          else
+            git commit -m "Update regulation text from eCFR"
+            git push
+          fi
+
+      - name: Open an issue for new Federal Register notices
+        if: hashFiles('tools/new-notices.md') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          open=$(gh issue list --state open --search "New OSHA notices to review in:title" --json number --jq 'length')
+          if [ "$open" = "0" ]; then
+            gh issue create --title "New OSHA notices to review ($(date +%Y-%m-%d))" --body-file tools/new-notices.md
+          else
+            echo "An open review issue already exists; not opening another."
+          fi
