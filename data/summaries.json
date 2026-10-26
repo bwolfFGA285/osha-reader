@@ -1,0 +1,188 @@
+{
+  "1904.4": {
+    "en": "Record every work-related injury or illness that is a new case and meets the general recording criteria in 1904.7.",
+    "zh": "记录每一个与工作相关、属于新病例并符合1904.7一般记录标准的伤害或疾病。",
+    "es": "Registre toda lesión o enfermedad relacionada con el trabajo que sea un caso nuevo y cumpla los criterios generales de registro de la 1904.7.",
+    "key": [["(a)", "What must be recorded"]]
+  },
+  "1904.7": {
+    "en": "A case is recordable if it causes death, days away from work, restricted work or job transfer, medical treatment beyond first aid, loss of consciousness, or is a significant injury or illness diagnosed by a doctor or other licensed health care professional. This section also lists exactly what counts as first aid.",
+    "zh": "如果伤病导致死亡、缺勤、限制工作或调岗、超出急救的医疗处理、失去知觉，或经医生或其他持证医疗专业人员诊断为重大伤病，则必须记录。本条还列出了哪些属于急救。",
+    "es": "Un caso es registrable si causa muerte, días de ausencia, trabajo restringido o transferencia, tratamiento médico más allá de primeros auxilios, pérdida del conocimiento, o si es una lesión o enfermedad importante diagnosticada por un médico u otro profesional de salud con licencia. La sección también enumera qué se considera primeros auxilios.",
+    "key": [["(a)", "The recording criteria"], ["(b)(3)", "Days away from work"], ["(b)(5)(ii)", "What counts as first aid"]]
+  },
+  "1904.32": {
+    "en": "At the end of each year, review the OSHA 300 Log, complete and certify the 300A summary, and post it from February 1 through April 30 where employee notices are usually posted.",
+    "zh": "每年年底，审核OSHA 300日志，完成并签署300A汇总表，并于2月1日至4月30日张贴在通常张贴员工通知的地方。",
+    "es": "Al final de cada año, revise el Registro OSHA 300, complete y certifique el resumen 300A, y publíquelo del 1 de febrero al 30 de abril donde normalmente se colocan los avisos para empleados.",
+    "key": [["(a)", "Year-end requirements"], ["(b)(5)", "How to post"], ["(b)(6)", "Posting dates"]]
+  },
+  "1904.39": {
+    "en": "Report a work-related fatality to OSHA within 8 hours. Report an in-patient hospitalization, amputation or loss of an eye within 24 hours.",
+    "zh": "与工作相关的死亡须在8小时内向OSHA报告。住院、截肢或失去一只眼睛须在24小时内报告。",
+    "es": "Reporte a OSHA una muerte relacionada con el trabajo dentro de 8 horas. Reporte una hospitalización, amputación o pérdida de un ojo dentro de 24 horas.",
+    "key": [["(a)(1)", "Fatality: 8 hours"], ["(a)(2)", "Hospitalization, amputation, eye loss: 24 hours"]]
+  },
+  "1910.22": {
+    "en": "Keep work areas, aisles and storerooms clean and orderly, and floors as dry as practical. Inspect walking-working surfaces regularly and fix hazards before anyone uses the surface again, or guard them until fixed.",
+    "zh": "保持工作区域、通道和仓库清洁整齐，地面尽可能干燥。定期检查行走工作面，在有人再次使用前修复危险，修复前须加以防护。",
+    "es": "Mantenga las áreas de trabajo, pasillos y almacenes limpios y ordenados, y los pisos lo más secos posible. Inspeccione regularmente las superficies para caminar y corrija los peligros antes de que alguien vuelva a usarlas, o protéjalos hasta repararlos.",
+    "key": [["(a)(1)", "Clean and orderly"], ["(a)(2)", "Floors clean and dry"], ["(d)(1)", "Regular inspection"], ["(d)(2)", "Fix hazards before reuse"]]
+  },
+  "1910.23": {
+    "en": "Ladders must be inspected before first use each shift. A ladder with defects must be tagged \"Dangerous: Do Not Use\" and removed from service until repaired or replaced.",
+    "zh": "梯子在每班首次使用前必须检查。有缺陷的梯子必须挂上“危险：禁止使用”标签，并停止使用，直到修复或更换。",
+    "es": "Las escaleras deben inspeccionarse antes del primer uso de cada turno. Una escalera con defectos debe etiquetarse \"Peligro: No usar\" y retirarse de servicio hasta repararla o reemplazarla.",
+    "key": [["(b)(9)", "Inspect each shift"], ["(b)(10)", "Tag out defective ladders"]]
+  },
+  "1910.28": {
+    "en": "Employees on a surface with an unprotected side or edge 4 feet or more above a lower level must be protected by guardrails, safety nets or personal fall protection. This section also sets the rules for fixed ladders over 24 feet.",
+    "zh": "在距下层4英尺或以上、边缘无防护的表面上作业的员工，必须有护栏、安全网或个人防坠落系统保护。本条还规定了超过24英尺的固定梯的要求。",
+    "es": "Los empleados en una superficie con un lado o borde sin protección a 4 pies o más sobre un nivel inferior deben estar protegidos con barandas, redes de seguridad o protección personal contra caídas. La sección también regula las escaleras fijas de más de 24 pies.",
+    "key": [["(b)(1)(i)", "4-foot rule for unprotected edges"]]
+  },
+  "1910.37": {
+    "en": "Exit routes must stay free and unobstructed, with nothing stored in them even temporarily. Each exit must be clearly visible and marked with an \"Exit\" sign.",
+    "zh": "疏散路线必须保持畅通无阻，即使临时也不得存放任何物品。每个出口必须清晰可见，并标有“出口”标志。",
+    "es": "Las rutas de salida deben mantenerse libres y despejadas, sin almacenar nada en ellas, ni siquiera temporalmente. Cada salida debe ser claramente visible y estar marcada con un letrero de \"Salida\".",
+    "key": [["(a)(3)", "Keep exit routes clear"], ["(b)(2)", "Exit signs"]]
+  },
+  "1910.38": {
+    "en": "When an OSHA standard requires an emergency action plan, it must be written, kept at the workplace and available to employees (employers with 10 or fewer employees may communicate it orally). It must cover reporting emergencies, evacuation, accounting for employees and who to contact.",
+    "zh": "当OSHA标准要求制定应急行动计划时，该计划必须是书面的，存放在工作场所并供员工查阅（10名或以下员工的雇主可口头传达）。计划必须包括紧急情况报告、疏散、清点人数和联系人。",
+    "es": "Cuando una norma de OSHA exige un plan de acción de emergencia, debe estar por escrito, guardado en el lugar de trabajo y disponible para los empleados (empleadores con 10 o menos empleados pueden comunicarlo verbalmente). Debe cubrir cómo reportar emergencias, la evacuación, el conteo de empleados y a quién contactar.",
+    "key": [["(a)", "When a plan is required"], ["(b)", "Written plan"], ["(c)", "Minimum elements"]]
+  },
+  "1910.95": {
+    "en": "When noise exposure reaches an 8-hour average of 85 decibels, run a hearing conservation program: monitoring, a baseline and then annual hearing tests, hearing protection at no cost, and annual training.",
+    "zh": "当噪声暴露达到8小时平均85分贝时，必须实施听力保护计划：噪声监测、基线及每年听力测试、免费提供听力保护用品，以及每年培训。",
+    "es": "Cuando la exposición al ruido llega a un promedio de 85 decibeles en 8 horas, se debe tener un programa de conservación auditiva: monitoreo, una audiometría base y luego anual, protección auditiva sin costo y capacitación anual.",
+    "key": [["(c)(1)", "When the program is required"], ["(g)(1)", "Audiometric testing"], ["(g)(6)", "Annual audiogram"], ["(i)(1)", "Hearing protectors at no cost"], ["(k)(1)", "Training"]]
+  },
+  "1910.132": {
+    "en": "Assess the workplace for hazards that need PPE and certify the assessment in writing. Provide the right PPE, generally at no cost to employees, and train each person to know when and how to use, care for and dispose of it.",
+    "zh": "评估工作场所中需要个人防护装备的危险，并书面证明评估已完成。提供合适的个人防护装备（一般免费），并培训每位员工何时及如何使用、保养和处置。",
+    "es": "Evalúe el lugar de trabajo para identificar peligros que requieran EPP y certifique la evaluación por escrito. Proporcione el EPP adecuado, generalmente sin costo para los empleados, y capacite a cada persona sobre cuándo y cómo usarlo, cuidarlo y desecharlo.",
+    "key": [["(d)(1)", "Hazard assessment"], ["(d)(2)", "Written certification"], ["(f)(1)", "Training"], ["(h)(1)", "Employer pays"]]
+  },
+  "1910.133": {
+    "en": "Employees must use eye or face protection when exposed to flying particles, molten material, chemicals or other eye hazards. Where there are flying objects, the protection must include side protection.",
+    "zh": "员工在面临飞溅颗粒、熔融物、化学品或其他眼部危险时，必须使用眼部或面部防护。存在飞溅物时，防护必须包括侧面防护。",
+    "es": "Los empleados deben usar protección para ojos o cara cuando estén expuestos a partículas volantes, material fundido, químicos u otros peligros para los ojos. Donde haya objetos volantes, la protección debe incluir protección lateral.",
+    "key": [["(a)(1)", "When eye/face protection is required"], ["(a)(2)", "Side protection"]]
+  },
+  "1910.134": {
+    "en": "Where respirators are needed, have a written respiratory protection program. Employees need a medical evaluation before fit testing or use, and tight-fitting respirators must be fit tested before first use and at least once a year. Voluntary use has its own lighter rules.",
+    "zh": "需要使用呼吸器时，必须制定书面呼吸保护计划。员工在适合性测试或使用前须进行医学评估，紧密贴合型呼吸器须在首次使用前及至少每年进行一次适合性测试。自愿使用有较宽松的规定。",
+    "es": "Donde se necesiten respiradores, debe haber un programa escrito de protección respiratoria. Los empleados necesitan una evaluación médica antes de la prueba de ajuste o del uso, y los respiradores de ajuste hermético deben probarse antes del primer uso y al menos una vez al año. El uso voluntario tiene reglas más simples.",
+    "key": [["(c)(1)", "Written program"], ["(c)(2)(i)", "Voluntary use"], ["(e)(1)", "Medical evaluation"], ["(f)(2)", "Fit testing"]]
+  },
+  "1910.138": {
+    "en": "Select and require the right gloves or hand protection when hands are exposed to cuts, lacerations, abrasions, punctures, chemicals, burns or harmful temperatures. Base the choice on the task, conditions and the hazards present.",
+    "zh": "当手部面临割伤、撕裂、擦伤、刺伤、化学品、烧伤或有害温度时，必须选择并要求使用合适的手套或手部防护。根据作业、条件和危险进行选择。",
+    "es": "Seleccione y exija los guantes o la protección de manos adecuados cuando las manos estén expuestas a cortes, laceraciones, abrasiones, pinchazos, químicos, quemaduras o temperaturas peligrosas. Base la elección en la tarea, las condiciones y los peligros presentes.",
+    "key": [["(a)", "When hand protection is required"], ["(b)", "How to select it"]]
+  },
+  "1910.146": {
+    "en": "Evaluate the workplace for permit-required confined spaces and warn employees with danger signs. If employees will enter them, have a written permit space program.",
+    "zh": "评估工作场所中是否存在需许可的受限空间，并用危险标志警示员工。如果员工需要进入，必须制定书面许可空间计划。",
+    "es": "Evalúe el lugar de trabajo para identificar espacios confinados que requieren permiso y advierta a los empleados con letreros de peligro. Si los empleados entrarán, debe haber un programa escrito de espacios con permiso.",
+    "key": [["(c)(1)", "Evaluate the workplace"], ["(c)(2)", "Warn employees"], ["(c)(4)", "Written program for entry"]]
+  },
+  "1910.147": {
+    "en": "Before anyone services or maintains a machine where unexpected startup or stored energy could hurt them, the machine must be shut down, isolated, and locked or tagged out under a written procedure. Procedures are inspected at least once a year, and employees are trained.",
+    "zh": "在维修或保养可能意外启动或释放储存能量而伤人的设备前，必须按照书面程序将设备停机、隔离并上锁或挂牌。程序至少每年检查一次，员工须接受培训。",
+    "es": "Antes de dar servicio o mantenimiento a una máquina donde un arranque inesperado o energía almacenada pueda causar lesiones, la máquina debe apagarse, aislarse y bloquearse o etiquetarse según un procedimiento escrito. Los procedimientos se inspeccionan al menos una vez al año y los empleados reciben capacitación.",
+    "key": [["(c)(1)", "Energy control program"], ["(c)(6)(i)", "Annual periodic inspection"], ["(c)(7)(i)", "Training"], ["(d)", "Lockout sequence"]]
+  },
+  "1910.151": {
+    "en": "If there is no clinic or hospital nearby, someone on site must be trained in first aid. Where eyes or body could be exposed to corrosive materials, provide eyewash or drench facilities in the work area.",
+    "zh": "如果附近没有诊所或医院，现场必须有人接受过急救培训。在眼睛或身体可能接触腐蚀性物质的地方，工作区域内必须提供洗眼或冲淋设施。",
+    "es": "Si no hay una clínica u hospital cercano, alguien en el sitio debe estar capacitado en primeros auxilios. Donde los ojos o el cuerpo puedan exponerse a materiales corrosivos, proporcione lavaojos o duchas en el área de trabajo.",
+    "key": [["(b)", "First aid trained person"], ["(c)", "Eyewash and drench"]]
+  },
+  "1910.157": {
+    "en": "Portable fire extinguishers must be visually inspected monthly and get an annual maintenance check that is recorded. Employees expected to use them need training when hired and at least once a year.",
+    "zh": "便携式灭火器必须每月目视检查，并每年进行有记录的维护检查。预期使用灭火器的员工须在入职时及至少每年接受一次培训。",
+    "es": "Los extintores portátiles deben inspeccionarse visualmente cada mes y recibir un mantenimiento anual que se registre. Los empleados que deban usarlos necesitan capacitación al ser contratados y al menos una vez al año.",
+    "key": [["(e)(2)", "Monthly inspection"], ["(e)(3)", "Annual maintenance"], ["(g)(2)", "Training frequency"]]
+  },
+  "1910.176": {
+    "en": "Where mechanical handling equipment is used, keep safe clearances for aisles, docks and doorways, and keep aisles marked and clear. Stack stored material so it is stable, and keep storage areas free of tripping and fire hazards.",
+    "zh": "在使用机械搬运设备的地方，通道、装卸平台和门口须保持安全间距，通道须标记并保持畅通。存放物料须堆放稳固，存储区域不得有绊倒和火灾危险。",
+    "es": "Donde se use equipo mecánico de manejo, mantenga espacios seguros en pasillos, muelles y puertas, y los pasillos marcados y despejados. Apile el material almacenado de forma estable y mantenga las áreas de almacenamiento libres de peligros de tropiezo e incendio.",
+    "key": [["(a)", "Aisles and clearances"], ["(b)", "Secure storage"], ["(c)", "Housekeeping"]]
+  },
+  "1910.178": {
+    "en": "Forklift and other powered industrial truck operators must be trained and evaluated before driving, re-evaluated at least every three years, and given refresher training after an accident, near miss or unsafe operation. Every truck must be examined before use, at least daily, or after each shift when it runs around the clock.",
+    "zh": "叉车等动力工业车辆的操作员在驾驶前必须接受培训和评估，至少每三年重新评估一次，发生事故、险肇事件或不安全操作后须接受复训。每台车辆在使用前必须检查，至少每天一次；如果全天候运行，则每班结束后检查。",
+    "es": "Los operadores de montacargas y otros vehículos industriales motorizados deben recibir capacitación y evaluación antes de manejar, ser reevaluados al menos cada tres años y recibir capacitación de repaso después de un accidente, casi accidente u operación insegura. Cada vehículo debe inspeccionarse antes de usarse, al menos a diario, o después de cada turno si opera las 24 horas.",
+    "key": [["(l)(1)(i)", "Operator competence"], ["(l)(4)(ii)", "When refresher training is required"], ["(l)(4)(iii)", "Evaluation every 3 years"], ["(l)(6)", "Certification"], ["(q)(7)", "Pre-use examination"]]
+  },
+  "1910.179": {
+    "en": "Overhead and gantry cranes must have their rated load plainly marked. New and altered cranes are inspected before first use, and cranes in service get both frequent and periodic inspections.",
+    "zh": "桥式和门式起重机必须清楚标明额定载荷。新的和改装的起重机在首次使用前须检查，在用起重机须进行频繁检查和定期检查。",
+    "es": "Las grúas puente y pórtico deben tener su carga nominal claramente marcada. Las grúas nuevas o modificadas se inspeccionan antes del primer uso, y las grúas en servicio reciben inspecciones frecuentes y periódicas.",
+    "key": [["(b)(5)", "Rated load marking"], ["(j)(1)(i)", "Initial inspection"], ["(j)(1)(ii)", "Frequent and periodic inspections"]]
+  },
+  "1910.184": {
+    "en": "A competent person must inspect each sling and its attachments every day before use. Damaged or defective slings are removed from service. Alloy steel chain slings also need a documented thorough inspection at least once a year.",
+    "zh": "每天使用前，必须由合格人员检查每条吊索及其附件。损坏或有缺陷的吊索须停止使用。合金钢链吊索还需至少每年进行一次有记录的彻底检查。",
+    "es": "Una persona competente debe inspeccionar cada eslinga y sus accesorios todos los días antes de usarla. Las eslingas dañadas o defectuosas se retiran de servicio. Las eslingas de cadena de acero aleado también necesitan una inspección completa documentada al menos una vez al año.",
+    "key": [["(d)", "Daily inspection"], ["(e)(3)(i)", "Periodic chain sling inspection"], ["(e)(3)(ii)", "Inspection records"]]
+  },
+  "1910.212": {
+    "en": "Machines must have guarding that protects the operator and nearby workers from point-of-operation hazards, nip points, rotating parts, flying chips and sparks.",
+    "zh": "机器必须配备防护装置，保护操作员和附近员工免受作业点、夹点、旋转部件、飞屑和火花的伤害。",
+    "es": "Las máquinas deben tener resguardos que protejan al operador y a los trabajadores cercanos de los peligros del punto de operación, puntos de atrapamiento, piezas giratorias, virutas y chispas.",
+    "key": [["(a)(1)", "Types of guarding"], ["(a)(3)(ii)", "Point of operation"]]
+  },
+  "1910.219": {
+    "en": "Guard belts, pulleys, gears, sprockets, chains and shafts used to transmit power, especially parts within 7 feet of the floor or work platform.",
+    "zh": "用于传递动力的皮带、皮带轮、齿轮、链轮、链条和轴必须加以防护，尤其是距地面或工作平台7英尺以内的部件。",
+    "es": "Proteja las bandas, poleas, engranajes, ruedas dentadas, cadenas y ejes que transmiten potencia, especialmente las partes a menos de 7 pies del piso o plataforma de trabajo.",
+    "key": [["(d)(1)", "Pulleys"], ["(e)(1)(i)", "Horizontal belts"]]
+  },
+  "1910.242": {
+    "en": "The employer is responsible for the safe condition of all tools, including tools employees bring. Compressed air for cleaning must be reduced below 30 psi and used only with chip guarding and PPE.",
+    "zh": "雇主负责所有工具的安全状况，包括员工自带的工具。用于清洁的压缩空气必须降至30 psi以下，并且只能在有屑片防护和个人防护装备的情况下使用。",
+    "es": "El empleador es responsable de la condición segura de todas las herramientas, incluidas las que traen los empleados. El aire comprimido para limpieza debe reducirse a menos de 30 psi y usarse solo con protección contra virutas y EPP.",
+    "key": [["(a)", "Safe condition of tools"], ["(b)", "Compressed air under 30 psi"]]
+  },
+  "1910.303": {
+    "en": "Electrical equipment must be free of recognized hazards and installed and used as listed or labeled. Disconnects must be marked to show their purpose, and enough working space must be kept clear around electrical equipment.",
+    "zh": "电气设备不得存在已知危险，须按列名或标签安装和使用。断路装置必须标明用途，电气设备周围须保持足够的工作空间。",
+    "es": "El equipo eléctrico debe estar libre de peligros reconocidos e instalarse y usarse según su listado o etiqueta. Los desconectadores deben marcarse para indicar su propósito, y se debe mantener libre suficiente espacio de trabajo alrededor del equipo eléctrico.",
+    "key": [["(b)(1)", "Equipment free of hazards"], ["(f)(1)", "Label disconnects"], ["(g)(1)", "Working space"]]
+  },
+  "1910.333": {
+    "en": "De-energize live parts before working on or near them, and lock out or tag the circuits. Only qualified persons may work on parts that have not been de-energized.",
+    "zh": "在带电部件上或附近作业前须断电，并对电路上锁或挂牌。只有合格人员才能在未断电的部件上作业。",
+    "es": "Desenergice las partes energizadas antes de trabajar en ellas o cerca, y bloquee o etiquete los circuitos. Solo personas calificadas pueden trabajar en partes que no se han desenergizado.",
+    "key": [["(a)(1)", "De-energize first"], ["(b)(2)", "Lockout and tagging"], ["(c)(2)", "Qualified persons only for live work"]]
+  },
+  "1910.1020": {
+    "en": "Keep employee medical records for the length of employment plus 30 years, and exposure records for at least 30 years. Employees and their representatives have the right to see them in a reasonable time.",
+    "zh": "员工医疗记录须保存至雇佣期满后30年，暴露记录须保存至少30年。员工及其代表有权在合理时间内查阅。",
+    "es": "Conserve los registros médicos de los empleados durante el tiempo de empleo más 30 años, y los registros de exposición al menos 30 años. Los empleados y sus representantes tienen derecho a verlos en un tiempo razonable.",
+    "key": [["(d)(1)(i)", "Medical records retention"], ["(d)(1)(ii)", "Exposure records retention"], ["(e)(1)(i)", "Employee access"]]
+  },
+  "1910.1030": {
+    "en": "Employees with occupational exposure to blood (such as designated first aid responders) need a written exposure control plan, reviewed at least yearly. The hepatitis B vaccine must be made available to them at no cost.",
+    "zh": "有职业性血液暴露的员工（如指定的急救人员）需要书面暴露控制计划，并至少每年审核一次。必须免费为他们提供乙肝疫苗。",
+    "es": "Los empleados con exposición ocupacional a sangre (como los encargados designados de primeros auxilios) necesitan un plan escrito de control de exposición, revisado al menos cada año. La vacuna contra la hepatitis B debe ofrecerse sin costo.",
+    "key": [["(c)(1)(i)", "Exposure control plan"], ["(c)(1)(iv)", "Annual review"], ["(f)(1)(i)", "Hepatitis B vaccine"]]
+  },
+  "1910.1053": {
+    "en": "No employee may be exposed to respirable crystalline silica above 50 micrograms per cubic meter as an 8-hour average. Assess exposure for anyone who may be at or above the action level, and set up regulated areas where the limit could be exceeded.",
+    "zh": "员工接触可吸入结晶二氧化硅不得超过8小时平均每立方米50微克。对可能达到或超过行动水平的人员进行暴露评估，并在可能超标的地方设立管制区域。",
+    "es": "Ningún empleado puede estar expuesto a sílice cristalina respirable por encima de 50 microgramos por metro cúbico como promedio de 8 horas. Evalúe la exposición de quien pueda estar en el nivel de acción o por encima, y establezca áreas reguladas donde se pueda exceder el límite.",
+    "key": [["(c)", "Exposure limit"], ["(d)(1)", "Exposure assessment"], ["(e)(1)", "Regulated areas"]]
+  },
+  "1910.1200": {
+    "en": "Have a written hazard communication program. Label chemical containers, keep a safety data sheet for every hazardous chemical where employees can get to it each shift, and train employees on the chemical hazards in their area when first assigned and whenever a new hazard is introduced.",
+    "zh": "制定书面危害沟通计划。为化学品容器贴标签，在员工每班都能获取的地方保存每种危险化学品的安全数据表，并在员工首次分配工作时以及引入新危险时，对其进行所在区域化学危险的培训。",
+    "es": "Tenga un programa escrito de comunicación de peligros. Etiquete los envases de químicos, mantenga una hoja de datos de seguridad de cada químico peligroso donde los empleados puedan consultarla en cada turno, y capacite a los empleados sobre los peligros químicos de su área al ser asignados y cuando se introduzca un nuevo peligro.",
+    "key": [["(e)(1)", "Written program"], ["(f)(6)", "Workplace labels"], ["(g)(8)", "SDS access"], ["(h)(1)", "Training"], ["(j)(2)(ii)", "Nov 20, 2026 employer deadline"]]
+  }
+}

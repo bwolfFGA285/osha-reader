@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Official OSHA 29 CFR 1910 General Industry and 1904 Recordkeeping text with plain-language summaries, search and rule-change tracking.">
+<title>OSHA General Industry Reader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+html { padding-top: env(safe-area-inset-top, 0px); }
+body { margin: 0; }
+[hidden] { display: none !important; }
+/* Layout: sticky navy header + tab strip; sidebar index beside a reading column on desktop, drawer + bottom tabs on phones. */
+:root {
+  --navy: #1E3A5F;
+  --navy-ink: #FFFFFF;
+  --navy-sub: #C9D6E6;
+  --bg: #F5F6F4;
+  --surface: #FFFFFF;
+  --surface-2: #EEF2F6;
+  --fg: #1B2330;
+  --muted: #4E5866;
+  --line: #D9DEE4;
+  --accent: #B93E0B;
+  --accent-soft: #FCEEE6;
+  --accent-ink: #8F2F07;
+  --blue-soft: #E6EDF6;
+  --blue-ink: #1E3A5F;
+  --green-soft: #E7F1E6;
+  --green-ink: #2C5A28;
+  --grey-soft: #ECEEF1;
+  --grey-ink: #4A525E;
+  --hl: #FFF1B8;
+  --focus: #2F6DB5;
+  --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-reg: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-cite: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --sidebar: 320px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #142A45; --navy-ink: #F2F5F9; --navy-sub: #A9BCD3;
+    --bg: #11161D; --surface: #181F28; --surface-2: #1F2833; --fg: #E6EAF0; --muted: #A6B0BD; --line: #2C3744;
+    --accent: #F0844F; --accent-soft: #3A2318; --accent-ink: #F8B48F;
+    --blue-soft: #1D2D42; --blue-ink: #A9C6EA; --green-soft: #1D2E1C; --green-ink: #A7D3A1; --grey-soft: #252D37; --grey-ink: #B9C1CC;
+    --hl: #4A3F12; --focus: #7FB0EE; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #142A45; --navy-ink: #F2F5F9; --navy-sub: #A9BCD3;
+  --bg: #11161D; --surface: #181F28; --surface-2: #1F2833; --fg: #E6EAF0; --muted: #A6B0BD; --line: #2C3744;
+  --accent: #F0844F; --accent-soft: #3A2318; --accent-ink: #F8B48F;
+  --blue-soft: #1D2D42; --blue-ink: #A9C6EA; --green-soft: #1D2E1C; --green-ink: #A7D3A1; --grey-soft: #252D37; --grey-ink: #B9C1CC;
+  --hl: #4A3F12; --focus: #7FB0EE; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--font-ui); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy); }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+a { color: var(--blue-ink); }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; }
+.bar { background: var(--navy); color: var(--navy-ink); }
+.bar-in { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding-block: 12px; max-width: 1400px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand svg { flex: none; }
+.brand-name { font-size: 19px; font-weight: 600; letter-spacing: .01em; }
+.brand-sub { font-size: 12.5px; color: var(--navy-sub); }
+.langs { display: flex; gap: 6px; }
+.lang { background: transparent; border: 1px solid color-mix(in srgb, var(--navy-ink) 40%, transparent); color: var(--navy-ink); border-radius: 6px; min-height: 40px; min-width: 48px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.lang[aria-pressed="true"] { background: var(--navy-ink); color: var(--navy); font-weight: 600; border-color: var(--navy-ink); }
+.tabs { background: var(--surface); border-bottom: 1px solid var(--line); }
+.tabs-in { display: flex; gap: 22px; max-width: 1400px; margin: 0 auto; overflow-x: auto; }
+.tab { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; border-bottom: 3px solid transparent; padding: 12px 2px 9px; min-height: 46px; cursor: pointer; color: var(--muted); font-size: 15px; white-space: nowrap; }
+.tab:hover { color: var(--fg); }
+.tab[aria-selected="true"] { color: var(--fg); font-weight: 600; border-bottom-color: var(--accent); }
+.badge { background: var(--accent); color: #fff; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 1px 7px; line-height: 1.5; }
+
+/* Shell */
+.shell { max-width: 1400px; margin: 0 auto; padding-block: 20px 48px; }
+.view[hidden] { display: none !important; }
+.browse { display: grid; grid-template-columns: var(--sidebar) minmax(0, 1fr); gap: 24px; align-items: start; }
+
+/* Sidebar */
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 128px); max-height: calc(100vh - 150px); display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.side-head { padding: 14px; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid var(--line); }
+.parts { display: grid; grid-template-columns: 1fr 1fr; background: var(--surface-2); border-radius: 8px; padding: 3px; gap: 3px; }
+.part-btn { border: 0; background: transparent; border-radius: 6px; min-height: 38px; cursor: pointer; font-size: 13.5px; color: var(--muted); }
+.part-btn[aria-pressed="true"] { background: var(--surface); color: var(--fg); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.search { position: relative; }
+.search input { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px 10px 38px; background: var(--surface); font-size: 15px; }
+.search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.side-list { overflow-y: auto; padding: 6px 8px 14px; flex: 1; }
+.sp { margin-top: 4px; }
+.sp > summary { list-style: none; cursor: pointer; padding: 9px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.sp > summary::-webkit-details-marker { display: none; }
+.sp > summary::before { content: ""; width: 7px; height: 7px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(-45deg); transition: transform .15s; flex: none; }
+.sp[open] > summary::before { transform: rotate(45deg); }
+.sp > summary:hover { background: var(--surface-2); }
+.sec-btn { display: grid; grid-template-columns: auto 1fr; gap: 0 10px; align-items: baseline; width: 100%; text-align: left; background: transparent; border: 0; border-radius: 7px; padding: 8px 10px; min-height: 44px; cursor: pointer; }
+.sec-btn:hover { background: var(--surface-2); }
+.sec-btn[aria-current="true"] { background: var(--navy); color: var(--navy-ink); }
+.sec-num { font-family: var(--font-cite); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.sec-title { font-size: 13.5px; line-height: 1.35; }
+.sec-flag { grid-column: 2; justify-self: start; margin-top: 4px; }
+.empty-note { color: var(--muted); font-size: 13.5px; padding: 10px; }
+
+/* Chips */
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; border-radius: 4px; padding: 2px 7px; line-height: 1.5; }
+.chip.final { background: var(--accent-soft); color: var(--accent-ink); }
+.chip.proposed { background: var(--blue-soft); color: var(--blue-ink); }
+.chip.withdrawn { background: var(--grey-soft); color: var(--grey-ink); }
+.chip.ok { background: var(--green-soft); color: var(--green-ink); }
+
+/* Reader */
+.reader { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px clamp(18px, 3.2vw, 40px) 36px; }
+.crumbs { font-size: 13px; color: var(--muted); }
+.sec-h { font-family: var(--font-reg); font-weight: 600; font-size: clamp(25px, 2.6vw, 32px); line-height: 1.2; margin: 6px 0 0; text-wrap: balance; }
+.sec-h .cite { font-family: var(--font-cite); font-weight: 500; font-size: .62em; color: var(--accent); display: block; margin-bottom: 4px; letter-spacing: .02em; }
+.toolrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-size: 14px; font-weight: 500; text-decoration: none; color: var(--fg); }
+.btn:hover { border-color: var(--navy); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(.95); }
+.btn.saved { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
+.change { margin-top: 18px; border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.change.final { background: var(--accent-soft); }
+.change.proposed { background: var(--blue-soft); }
+.change.withdrawn { background: var(--grey-soft); }
+.change p { margin: 0; font-size: 14.5px; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--blue-ink); text-decoration: underline; cursor: pointer; font-size: 14px; font-weight: 600; min-height: 32px; align-self: flex-start; }
+.summary { margin-top: 18px; background: var(--surface-2); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+.label { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.summary p { margin: 0; font-size: 16px; line-height: 1.6; max-width: 70ch; }
+.tnote { font-size: 12.5px; color: var(--muted); }
+.keys { display: flex; flex-wrap: wrap; gap: 8px; }
+.key { display: inline-flex; gap: 8px; align-items: baseline; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; min-height: 36px; cursor: pointer; font-size: 13px; }
+.key b { font-family: var(--font-cite); font-weight: 500; color: var(--accent); white-space: nowrap; }
+.key { text-align: left; }
+.key:hover { border-color: var(--navy); }
+.regtext { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 18px; font-family: var(--font-reg); font-size: 17px; line-height: 1.68; }
+.regtext .label { font-family: var(--font-ui); display: block; margin-bottom: 10px; }
+.regtext p { margin: 0 0 12px; max-width: 74ch; scroll-margin-top: 160px; border-radius: 4px; transition: background-color .6s; }
+.regtext p[data-depth="1"] { padding-left: 1.2em; }
+.regtext p[data-depth="2"] { padding-left: 2.4em; }
+.regtext p[data-depth="3"] { padding-left: 3.6em; }
+.regtext p[data-depth="4"] { padding-left: 4.8em; }
+.regtext p.flash { background: var(--hl); }
+.regtext h3, .regtext h4, .regtext h5 { font-family: var(--font-ui); font-weight: 600; margin: 26px 0 10px; line-height: 1.3; }
+.regtext h3 { font-size: 18px; } .regtext h4 { font-size: 16px; } .regtext h5 { font-size: 15px; }
+.regtext .note, .regtext .extract { border-left: 3px solid var(--line); padding-left: 14px; margin: 0 0 12px; color: var(--muted); font-size: 15.5px; }
+.regtext .cita { font-family: var(--font-ui); font-size: 12.5px; color: var(--muted); }
+.regtext .fp { padding-left: 1.2em; }
+.regtext .fig { font-family: var(--font-ui); font-size: 13.5px; }
+.tw { overflow-x: auto; margin: 0 0 16px; border: 1px solid var(--line); border-radius: 8px; }
+.tw table { border-collapse: collapse; font-family: var(--font-ui); font-size: 13px; line-height: 1.4; min-width: 100%; }
+.tw th, .tw td { border-bottom: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.tw th { background: var(--surface-2); font-weight: 600; }
+.tw caption { caption-side: top; text-align: left; padding: 8px 10px; font-weight: 600; }
+.source { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.loading { color: var(--muted); padding: 30px 0; }
+
+/* Home */
+.home h1 { font-family: var(--font-reg); font-weight: 600; font-size: clamp(26px, 3vw, 34px); margin: 0; text-wrap: balance; }
+.home .lead { color: var(--muted); max-width: 64ch; margin: 8px 0 0; }
+.alert { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; background: var(--accent-soft); color: var(--accent-ink); border-radius: 10px; padding: 14px 16px; }
+.alert b { font-weight: 600; }
+.alert .linkbtn { color: var(--accent-ink); }
+.grid-quick { margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.quick { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; display: flex; flex-direction: column; gap: 3px; min-height: 64px; }
+.quick:hover { border-color: var(--navy); }
+.quick .sec-num { color: var(--accent); }
+.quick span:last-child { font-size: 14px; }
+.h2 { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 28px 0 0; }
+
+/* Full-text results */
+.results { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.res { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 4px; width: 100%; }
+.res:hover { border-color: var(--navy); }
+.res .sec-num { color: var(--accent); }
+.res .snip { font-family: var(--font-reg); font-size: 15px; line-height: 1.5; }
+mark { background: var(--hl); color: inherit; padding: 0 1px; border-radius: 2px; }
+
+/* What's New */
+.page { max-width: 900px; display: flex; flex-direction: column; gap: 16px; }
+.page h1 { font-family: var(--font-reg); font-weight: 600; font-size: clamp(26px, 3vw, 34px); margin: 0; }
+.meta { color: var(--muted); font-size: 14px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; min-height: 38px; cursor: pointer; font-size: 13.5px; }
+.filter[aria-pressed="true"] { background: var(--navy); color: var(--navy-ink); border-color: var(--navy); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+.card h2 { margin: 0; font-size: 18px; line-height: 1.35; text-wrap: balance; }
+.card p { margin: 0; max-width: 72ch; }
+.card .act { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; font-size: 14.5px; }
+.dates { display: grid; gap: 6px; }
+.daterow { display: grid; grid-template-columns: 120px 1fr; gap: 10px; font-size: 14px; align-items: baseline; }
+.daterow time { font-family: var(--font-cite); font-size: 13px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.daterow.hl time, .daterow.hl span { color: var(--accent-ink); font-weight: 600; }
+.daterow.past time, .daterow.past span { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
+.secs { display: flex; flex-wrap: wrap; gap: 6px; }
+.sec-link { font-family: var(--font-cite); font-size: 12.5px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 4px 8px; min-height: 32px; cursor: pointer; }
+.sec-link:hover { border-color: var(--navy); }
+details.notices summary { cursor: pointer; font-size: 14px; color: var(--muted); min-height: 32px; display: flex; align-items: center; }
+details.notices ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; display: flex; flex-direction: column; gap: 4px; }
+.notice-date { font-family: var(--font-cite); font-size: 12.5px; color: var(--muted); }
+
+/* Saved */
+.saved-list { display: flex; flex-direction: column; gap: 10px; }
+.saved-item { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.saved-item .t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+.callout { background: var(--surface-2); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; }
+
+/* Phone */
+.only-phone { display: none; }
+.scrim { display: none; }
+@media (max-width: 900px) {
+  .browse { grid-template-columns: minmax(0, 1fr); }
+  .side { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; top: auto; max-height: 82vh; border-radius: 16px 16px 0 0; transform: translateY(105%); transition: transform .22s ease; padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+  .side.open { transform: none; }
+  .scrim.open { display: block; position: fixed; inset: 0; background: rgba(10, 16, 24, .45); z-index: 35; }
+  .only-phone { display: inline-flex; }
+  .tabs { display: none; }
+  .bottom { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+  .shell { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+  .reader { padding: 20px 16px 28px; border-radius: 10px; }
+  .regtext { font-size: 16.5px; }
+  .regtext p[data-depth="3"], .regtext p[data-depth="4"] { padding-left: 2.4em; }
+  .daterow { grid-template-columns: 1fr; gap: 0; }
+  .side { top: auto; }
+  .brand-sub { display: none; }
+}
+@media (min-width: 901px) { .bottom { display: none; } }
+.btab { background: none; border: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 58px; cursor: pointer; color: var(--muted); font-size: 11.5px; position: relative; }
+.btab[aria-selected="true"] { color: var(--accent); font-weight: 600; }
+.btab .badge { position: absolute; top: 5px; left: 56%; font-size: 10px; padding: 0 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <header class="bar">
+    <div class="bar-in gutter">
+      <div class="brand">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F59E5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        <div>
+          <div class="brand-name">OSHA Reader</div>
+          <div class="brand-sub">29 CFR 1910 General Industry · 1904 Recordkeeping</div>
+        </div>
+      </div>
+      <div class="langs" role="group" aria-label="Summary language">
+        <button class="lang" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+  <nav class="tabs" aria-label="Main">
+    <div class="tabs-in gutter" role="tablist">
+      <button class="tab" role="tab" data-view="browse" aria-selected="true">Browse</button>
+      <button class="tab" role="tab" data-view="news" aria-selected="false">What's New <span class="badge" data-newscount hidden></span></button>
+      <button class="tab" role="tab" data-view="saved" aria-selected="false">Saved <span class="badge" data-savedcount hidden></span></button>
+    </div>
+  </nav>
+</div>
+
+<main class="shell gutter">
+  <!-- Browse -->
+  <section class="view" id="view-browse">
+    <div class="browse">
+      <aside class="side" id="side" aria-label="Sections">
+        <div class="side-head">
+          <div class="only-phone" style="justify-content: space-between; align-items: center;">
+            <strong>Sections</strong>
+            <button class="btn" id="closeSide" aria-label="Close sections" style="min-height:40px;padding:6px 10px;">Close</button>
+          </div>
+          <div class="parts" role="group" aria-label="Part">
+            <button class="part-btn" data-part="1910" aria-pressed="true">1910 General Industry</button>
+            <button class="part-btn" data-part="1904" aria-pressed="false">1904 Recordkeeping</button>
+          </div>
+          <div class="search">
+            <label for="q" class="sr">Search sections</label>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input id="q" type="search" placeholder="forklift, LOTO, 1910.147, SDS" autocomplete="off">
+          </div>
+        </div>
+        <div class="side-list" id="sideList"><p class="empty-note">Loading sections…</p></div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <article class="reader" id="reader"><p class="loading">Loading…</p></article>
+    </div>
+  </section>
+
+  <!-- What's New -->
+  <section class="view" id="view-news" hidden>
+    <div class="page" id="newsPage"><p class="loading">Loading…</p></div>
+  </section>
+
+  <!-- Saved -->
+  <section class="view" id="view-saved" hidden>
+    <div class="page" id="savedPage"></div>
+  </section>
+</main>
+
+<nav class="bottom" aria-label="Main" role="tablist">
+  <button class="btab" role="tab" data-view="browse" aria-selected="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>Browse</button>
+  <button class="btab" role="tab" data-view="news" aria-selected="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4"/></svg>What's New<span class="badge" data-newscount hidden></span></button>
+  <button class="btab" role="tab" data-view="saved" aria-selected="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Saved</button>
+</nav>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function store(k, v) { try { if (v === undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
+
+  // Common workplace words → sections, so "forklift" finds 1910.178.
+  var SYN = {
+    "forklift": ["1910.178"], "fork lift": ["1910.178"], "pit": ["1910.178"], "lift truck": ["1910.178"], "pallet jack": ["1910.178"],
+    "loto": ["1910.147", "1910.333"], "lockout": ["1910.147", "1910.333"], "tagout": ["1910.147", "1910.333"], "hazardous energy": ["1910.147"],
+    "hazcom": ["1910.1200"], "sds": ["1910.1200"], "msds": ["1910.1200"], "label": ["1910.1200"], "chemical": ["1910.1200"], "ghs": ["1910.1200"],
+    "ppe": ["1910.132", "1910.133", "1910.138"], "glasses": ["1910.133"], "goggles": ["1910.133"], "face shield": ["1910.133"], "gloves": ["1910.138"], "cut": ["1910.138"],
+    "noise": ["1910.95"], "hearing": ["1910.95"], "earplug": ["1910.95"], "audiogram": ["1910.95"],
+    "ladder": ["1910.23", "1910.28"], "fall": ["1910.28", "1910.140"], "guardrail": ["1910.28", "1910.29"], "housekeeping": ["1910.22", "1910.176"], "slip": ["1910.22"],
+    "confined space": ["1910.146"], "crane": ["1910.179"], "hoist": ["1910.179"], "sling": ["1910.184"], "rigging": ["1910.184"],
+    "guard": ["1910.212", "1910.219"], "guarding": ["1910.212", "1910.219"], "pinch": ["1910.212"], "nip point": ["1910.212"], "conveyor": ["1910.212", "1910.219"], "belt": ["1910.219"],
+    "extinguisher": ["1910.157"], "fire": ["1910.157", "1910.39"], "exit": ["1910.36", "1910.37"], "evacuation": ["1910.38"], "emergency": ["1910.38"],
+    "first aid": ["1910.151"], "eyewash": ["1910.151"], "eye wash": ["1910.151"], "respirator": ["1910.134"], "dust mask": ["1910.134"], "n95": ["1910.134"], "fit test": ["1910.134"],
+    "silica": ["1910.1053"], "bloodborne": ["1910.1030"], "blood": ["1910.1030"], "electrical": ["1910.303", "1910.333"], "arc flash": ["1910.333"],
+    "compressed air": ["1910.242"], "air gun": ["1910.242"], "hand tool": ["1910.242"], "welding": ["1910.252"], "hot work": ["1910.252"],
+    "300 log": ["1904.7", "1904.29"], "recordable": ["1904.7"], "osha log": ["1904.7"], "300a": ["1904.32"], "report to osha": ["1904.39"], "hospitalization": ["1904.39"], "amputation": ["1904.39"],
+    "medical records": ["1910.1020"], "exposure records": ["1910.1020"], "dock": ["1910.176", "1910.178"], "storage": ["1910.176"]
+  };
+  var QUICK = ["1910.178", "1910.147", "1910.1200", "1910.132", "1910.212", "1910.95", "1910.134", "1910.22", "1910.23", "1910.37", "1910.157", "1910.151", "1910.179", "1910.184", "1910.333", "1910.1053", "1904.7", "1904.39"];
+  var UI = {
+    en: { summary: "Plain-language summary", key: "Key paragraphs", tnote: "" },
+    zh: { summary: "简明摘要", key: "关键条款", tnote: "非官方翻译。下方英文法规原文为法定要求。" },
+    es: { summary: "Resumen en lenguaje sencillo", key: "Párrafos clave", tnote: "Traducción no oficial. El texto oficial en inglés de abajo es el requisito legal." }
+  };
+
+  var S = {
+    index: null, sections: {}, byId: {}, summaries: {}, news: null, changes: {}, cache: {},
+    part: "1910", lang: store("osha.lang") || "en", saved: store("osha.saved") || [], view: "browse",
+    current: null, query: "", search: null
+  };
+
+  function fetchJSON(p) { return fetch(p).then(function (r) { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); }); }
+
+  // ---------- boot ----------
+  Promise.all([fetchJSON("data/index.json"), fetchJSON("data/summaries.json"), fetchJSON("data/news.json")]).then(function (res) {
+    S.index = res[0]; S.summaries = res[1]; S.news = res[2];
+    S.index.parts.forEach(function (p) {
+      p.subparts.forEach(function (sp) {
+        sp.sections.forEach(function (s) { s.part = p.part; s.subpart = sp.title; S.byId[s.id] = s; });
+      });
+    });
+    S.news.items.forEach(function (it) {
+      (it.sections || []).forEach(function (id) { if (!S.changes[id] || it.kind === "final") S.changes[id] = it; });
+    });
+    var count = S.news.items.filter(function (i) { return i.kind !== "withdrawn"; }).length;
+    $$("[data-newscount]").forEach(function (b) { b.textContent = count; b.hidden = false; });
+    setLang(S.lang);
+    renderSide();
+    renderSaved();
+    renderNews();
+    var h = decodeURIComponent((location.hash || "").replace(/^#/, ""));
+    if (h && S.byId[h]) openSection(h);
+    else if (h === "news" || h === "saved") { setView(h); renderHome(); }
+    else renderHome();
+  }).catch(function (e) {
+    $("#reader").innerHTML = '<p class="loading">The regulation data didn\'t load. Check your connection and reload the page.</p>';
+  });
+
+  // ---------- views ----------
+  function setView(v) {
+    S.view = v;
+    ["browse", "news", "saved"].forEach(function (k) { $("#view-" + k).hidden = k !== v; });
+    $$("[data-view]").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.view === v ? "true" : "false"); });
+    if (v === "saved") renderSaved();
+    window.scrollTo(0, 0);
+  }
+  $$("[data-view]").forEach(function (b) { b.addEventListener("click", function () { setView(b.dataset.view); if (b.dataset.view === "browse" && !S.current) renderHome(); }); });
+
+  function setLang(l) {
+    S.lang = l; store("osha.lang", l);
+    $$(".lang").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    if (S.current) renderSummary(S.current);
+  }
+  $$(".lang").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+
+  $$(".part-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      S.part = b.dataset.part;
+      $$(".part-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      renderSide();
+    });
+  });
+
+  // ---------- sidebar ----------
+  function flagChip(id) {
+    var c = S.changes[id];
+    if (!c) return "";
+    var t = c.kind === "final" ? "Updated" : c.kind === "proposed" ? "Proposed change" : "Withdrawn proposal";
+    return '<span class="chip ' + c.kind + ' sec-flag">' + t + "</span>";
+  }
+  function matchSections(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return null;
+    var hits = {}, order = [];
+    function add(id, score) { if (!S.byId[id] || S.byId[id].reserved) return; if (!(id in hits)) { hits[id] = 0; order.push(id); } hits[id] += score; }
+    Object.keys(SYN).forEach(function (k) { if (q.indexOf(k) !== -1 || (k.indexOf(q) === 0 && q.length >= 3)) SYN[k].forEach(function (id) { add(id, 5); }); });
+    var num = q.replace(/^(29\s*cfr\s*)?§?\s*/, "");
+    Object.keys(S.byId).forEach(function (id) {
+      var s = S.byId[id];
+      if (s.reserved) return;
+      var cite = (s.cite || "").toLowerCase(), title = (s.title || "").toLowerCase();
+      if (cite === num) add(id, 20);
+      else if (cite.indexOf(num) === 0 && /^\d/.test(num)) add(id, 8);
+      var words = q.split(/\s+/).filter(function (w) { return w.length > 1; });
+      var all = words.length && words.every(function (w) { return title.indexOf(w) !== -1; });
+      if (all) add(id, 4);
+      var sum = S.summaries[id];
+      if (sum && words.length && words.every(function (w) { return sum.en.toLowerCase().indexOf(w) !== -1; })) add(id, 2);
+    });
+    order.sort(function (a, b) { return hits[b] - hits[a]; });
+    return order;
+  }
+  function secButton(s) {
+    var label = s.appendix ? s.title : s.title;
+    return '<button class="sec-btn" data-sec="' + esc(s.id) + '"' + (S.current === s.id ? ' aria-current="true"' : "") + '>' +
+      '<span class="sec-num">' + esc(s.appendix ? "App." : s.cite) + '</span><span class="sec-title">' + esc(label) + "</span>" + flagChip(s.id) + "</button>";
+  }
+  function renderSide() {
+    var list = $("#sideList");
+    var hits = matchSections(S.query);
+    var html = "";
+    if (hits) {
+      html += hits.length ? hits.slice(0, 40).map(function (id) { return secButton(S.byId[id]); }).join("") : '<p class="empty-note">No section titles match.</p>';
+      html += '<div style="padding:10px 4px 0;"><button class="btn" id="fullText" style="width:100%;justify-content:center;">Search the full text for “' + esc(S.query.trim()) + '”</button></div>';
+    } else {
+      var part = S.index.parts.filter(function (p) { return p.part === S.part; })[0];
+      part.subparts.forEach(function (sp) {
+        var secs = sp.sections.filter(function (s) { return !s.reserved; });
+        if (!secs.length) return;
+        var open = S.current && secs.some(function (s) { return s.id === S.current; });
+        html += '<details class="sp"' + (open ? " open" : "") + '><summary>' + esc(sp.title.replace(/—/, " · ")) + "</summary>" + secs.map(secButton).join("") + "</details>";
+      });
+    }
+    list.innerHTML = html;
+    var ft = $("#fullText"); if (ft) ft.addEventListener("click", function () { fullTextSearch(S.query.trim()); });
+  }
+  $("#sideList").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-sec]"); if (b) openSection(b.dataset.sec);
+  });
+  var qTimer;
+  $("#q").addEventListener("input", function (e) {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(function () { S.query = e.target.value; renderSide(); }, 120);
+  });
+  $("#q").addEventListener("keydown", function (e) { if (e.key === "Enter" && S.query.trim()) { e.preventDefault(); fullTextSearch(S.query.trim()); } });
+
+  // phone drawer
+  function openSide() { $("#side").classList.add("open"); $("#scrim").classList.add("open"); }
+  function closeSide() { $("#side").classList.remove("open"); $("#scrim").classList.remove("open"); }
+  $("#scrim").addEventListener("click", closeSide);
+  $("#closeSide").addEventListener("click", closeSide);
+  function phone() { return window.matchMedia("(max-width: 900px)").matches; }
+
+  // ---------- home ----------
+  function renderHome() {
+    S.current = null;
+    var nov = S.news.items.filter(function (i) { return i.id === "hcs-2024"; })[0];
+    var due = nov && nov.dates.filter(function (d) { return d.highlight; })[0];
+    var showDue = due && new Date(due.date + "T23:59:59") >= new Date();
+    var r = $("#reader");
+    r.innerHTML =
+      '<div class="home">' +
+      '<button class="btn only-phone" data-opendrawer style="margin-bottom:14px;">Sections &amp; search</button>' +
+      "<h1>OSHA general industry regulations</h1>" +
+      '<p class="lead">The full official text of 29 CFR 1910 and 1904, with plain-language summaries in English, Chinese and Spanish for commonly used sections. Text current as of ' + fmtDate(S.index.asOf) + ".</p>" +
+      (showDue ? '<div class="alert"><b>' + fmtDate(due.date) + "</b><span>HazCom deadline: update workplace labels, the written program and training for newly identified chemical hazards.</span>" +
+        '<button class="linkbtn" data-goto="news">Details</button></div>' : "") +
+      '<p class="h2">Most-used sections</p><div class="grid-quick">' +
+      QUICK.filter(function (id) { return S.byId[id]; }).map(function (id) {
+        var s = S.byId[id];
+        return '<button class="quick" data-sec="' + id + '"><span class="sec-num">' + esc(s.cite) + "</span><span>" + esc(s.title) + "</span></button>";
+      }).join("") + "</div></div>";
+  }
+  $("#reader").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-sec]"); if (b) { openSection(b.dataset.sec, b.dataset.p); return; }
+    var g = e.target.closest("[data-goto]"); if (g) { setView(g.dataset.goto); return; }
+    var d = e.target.closest("[data-opendrawer]"); if (d) { openSide(); return; }
+    var k = e.target.closest("[data-jump]"); if (k) { jump(k.dataset.jump); return; }
+    var sv = e.target.closest("[data-save]"); if (sv) { toggleSave(sv.dataset.save); return; }
+    var cp = e.target.closest("[data-copy]"); if (cp) { copyLink(cp); return; }
+    var home = e.target.closest("[data-home]"); if (home) { renderHome(); renderSide(); try { history.replaceState(null, "", location.pathname); } catch (x) {} }
+  });
+
+  // ---------- reader ----------
+  function fmtDate(iso) {
+    var d = new Date(iso + "T12:00:00");
+    return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  }
+  function openSection(id, para) {
+    var s = S.byId[id]; if (!s) return;
+    S.current = id;
+    if (S.view !== "browse") setView("browse");
+    if (S.part !== s.part && !S.query) { S.part = s.part; $$(".part-btn").forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.part === s.part ? "true" : "false"); }); }
+    renderSide();
+    closeSide();
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+    var r = $("#reader");
+    r.innerHTML = '<p class="loading">Loading ' + esc(s.cite) + "…</p>";
+    var p = S.cache[id] ? Promise.resolve(S.cache[id]) : fetchJSON(s.file).then(function (d) { S.cache[id] = d; return d; });
+    p.then(function (d) {
+      if (S.current !== id) return;
+      var isSaved = S.saved.indexOf(id) !== -1;
+      var ch = S.changes[id];
+      var ecfr = s.appendix ? "https://www.ecfr.gov/current/title-29/part-" + s.part : "https://www.ecfr.gov/current/title-29/section-" + s.cite;
+      r.innerHTML =
+        '<div class="crumbs"><button class="linkbtn" data-home style="font-weight:500;">Home</button> · ' + esc(s.subpart) + "</div>" +
+        '<h1 class="sec-h"><span class="cite">' + (s.appendix ? "Part " + esc(s.part) : "§ " + esc(s.cite)) + "</span>" + esc(s.title) + "</h1>" +
+        '<div class="toolrow">' +
+        '<button class="btn only-phone" data-opendrawer>Sections</button>' +
+        '<button class="btn ' + (isSaved ? "saved" : "") + '" data-save="' + esc(id) + '" aria-pressed="' + isSaved + '">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="' + (isSaved ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>' + (isSaved ? "Saved" : "Save") + "</button>" +
+        '<button class="btn" data-copy="' + esc(id) + '">Copy link</button>' +
+        '<a class="btn" href="' + ecfr + '" target="_blank" rel="noopener">Open on eCFR</a></div>' +
+        (ch ? '<div class="change ' + ch.kind + '"><span class="chip ' + ch.kind + '" style="align-self:flex-start">' + esc(ch.status) + "</span><p><b>" + esc(ch.title) + ".</b> " + esc(ch.action) + '</p><button class="linkbtn" data-goto="news">See the details in What\'s New</button></div>' : "") +
+        '<div id="sumBox"></div>' +
+        '<div class="regtext"><span class="label">Official regulation text</span>' + d.html + "</div>" +
+        '<div class="source"><span>Source: eCFR, 29 CFR ' + esc(s.appendix ? "Part " + s.part : s.cite) + "</span><span>Text current as of " + fmtDate(S.index.asOf) + "</span></div>";
+      $$(".regtext p[data-p]", r).forEach(function (el) {
+        var depth = (el.dataset.p.match(/\(/g) || []).length - 1;
+        if (depth > 0) el.setAttribute("data-depth", Math.min(depth, 4));
+      });
+      renderSummary(id);
+      if (para) jump(para); else window.scrollTo(0, 0);
+    }).catch(function () {
+      if (S.current === id) r.innerHTML = '<p class="loading">This section didn\'t load. Check your connection and try again.</p>';
+    });
+  }
+  function renderSummary(id) {
+    var box = $("#sumBox"); if (!box) return;
+    var sm = S.summaries[id];
+    if (!sm) { box.innerHTML = ""; return; }
+    var ui = UI[S.lang];
+    box.innerHTML = '<section class="summary" aria-label="' + esc(ui.summary) + '"><span class="label">' + esc(ui.summary) + "</span>" +
+      (ui.tnote ? '<span class="tnote">' + esc(ui.tnote) + "</span>" : "") +
+      "<p>" + esc(sm[S.lang] || sm.en) + "</p>" +
+      (sm.key && sm.key.length ? '<span class="label">' + esc(ui.key) + '</span><div class="keys">' + sm.key.map(function (k) {
+        return '<button class="key" data-jump="' + esc(k[0]) + '"><b>' + esc(k[0]) + "</b>" + esc(k[1]) + "</button>";
+      }).join("") + "</div>" : "") + "</section>";
+  }
+  function jump(des) {
+    var el = $$(".regtext p[data-p]").filter(function (p) { return p.dataset.p === des; })[0];
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.classList.add("flash");
+    setTimeout(function () { el.classList.remove("flash"); }, 2200);
+  }
+  function toggleSave(id) {
+    var i = S.saved.indexOf(id);
+    if (i === -1) S.saved.push(id); else S.saved.splice(i, 1);
+    store("osha.saved", S.saved);
+    var b = $('[data-save="' + id + '"]');
+    if (b) {
+      var on = i === -1;
+      b.classList.toggle("saved", on); b.setAttribute("aria-pressed", on);
+      b.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="' + (on ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>' + (on ? "Saved" : "Save");
+    }
+    updateSavedCount();
+  }
+  function updateSavedCount() {
+    var b = $(".tab [data-savedcount]"); if (!b) return;
+    b.textContent = S.saved.length; b.hidden = !S.saved.length;
+  }
+  function copyLink(btn) {
+    var id = btn.dataset.copy, s = S.byId[id];
+    var text = "29 CFR " + s.cite + " " + s.title + " — https://www.ecfr.gov/current/title-29/section-" + s.cite;
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy link"; }, 1600); };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+    } catch (e) { fallbackCopy(text); done(); }
+  }
+  function fallbackCopy(t) {
+    var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {} ta.remove();
+  }
+
+  // ---------- full text search ----------
+  function loadSearch() {
+    if (S.search) return Promise.resolve(S.search);
+    return fetchJSON("data/search.json").then(function (d) { S.search = d; return d; });
+  }
+  function fullTextSearch(q) {
+    S.current = null;
+    closeSide();
+    if (S.view !== "browse") setView("browse");
+    var r = $("#reader");
+    r.innerHTML = '<p class="loading">Searching every section for “' + esc(q) + '”… The first full-text search downloads the search index (about 1 MB).</p>';
+    loadSearch().then(function (rows) {
+      var words = q.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 1; });
+      var res = [];
+      for (var i = 0; i < rows.length && res.length < 400; i++) {
+        var t = rows[i][2].toLowerCase();
+        if (words.every(function (w) { return t.indexOf(w) !== -1; })) res.push(rows[i]);
+      }
+      var bySec = {}, order = [];
+      res.forEach(function (x) { if (!bySec[x[0]]) { bySec[x[0]] = []; order.push(x[0]); } bySec[x[0]].push(x); });
+      var re = new RegExp("(" + words.map(function (w) { return w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")", "gi");
+      r.innerHTML = '<button class="btn only-phone" data-opendrawer style="margin-bottom:14px;">Sections &amp; search</button>' +
+        '<h1 class="sec-h" style="font-size:26px;">Full-text results for “' + esc(q) + '”</h1>' +
+        '<p class="meta">' + (res.length ? res.length + (res.length >= 400 ? "+" : "") + " paragraphs in " + order.length + " sections" : "No paragraphs contain all of those words. Try fewer or different words.") + "</p>" +
+        '<div class="results">' + order.slice(0, 60).map(function (id) {
+          var s = S.byId[id]; if (!s) return "";
+          return bySec[id].slice(0, 3).map(function (x) {
+            var t = x[2], j = t.toLowerCase().indexOf(words[0]);
+            var start = Math.max(0, j - 90), snip = (start ? "…" : "") + t.slice(start, start + 260) + (t.length > start + 260 ? "…" : "");
+            return '<button class="res" data-sec="' + esc(id) + '" data-p="' + esc(x[1]) + '"><span><span class="sec-num">' + esc(s.cite + (x[1] || "")) + "</span> · " + esc(s.title) + '</span><span class="snip">' + esc(snip).replace(re, "<mark>$1</mark>") + "</span></button>";
+          }).join("");
+        }).join("") + "</div>";
+    }).catch(function () { r.innerHTML = '<p class="loading">The search index didn\'t load. Check your connection and try again.</p>'; });
+  }
+
+  // ---------- What's New ----------
+  var newsFilter = "all";
+  function renderNews() {
+    var n = S.news, page = $("#newsPage");
+    var today = new Date();
+    var items = n.items.filter(function (i) { return newsFilter === "all" || i.kind === newsFilter; })
+      .sort(function (a, b) { return a.latest < b.latest ? 1 : -1; });
+    var kinds = [["all", "All"], ["final", "Final rules"], ["proposed", "Proposed"], ["withdrawn", "Withdrawn"]];
+    page.innerHTML = "<h1>What's New</h1>" +
+      '<p class="meta">OSHA rulemaking that touches Part 1910 and Part 1904, from the Federal Register · last reviewed ' + fmtDate(n.lastChecked) + ".</p>" +
+      '<div class="filters" role="group" aria-label="Filter">' + kinds.map(function (k) { return '<button class="filter" data-filter="' + k[0] + '" aria-pressed="' + (newsFilter === k[0]) + '">' + k[1] + "</button>"; }).join("") + "</div>" +
+      items.map(function (it) {
+        var label = it.kind === "final" ? "Final rule" : it.kind === "proposed" ? "Proposed rule" : "Withdrawn";
+        return '<article class="card"><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;"><span class="chip ' + it.kind + '">' + label + '</span><span class="meta" style="font-size:13px;">' + esc(it.status) + "</span></div>" +
+          "<h2>" + esc(it.title) + "</h2><p>" + esc(it.summary) + "</p>" +
+          '<div class="act"><b>What it means for employers:</b> ' + esc(it.action) + "</div>" +
+          (it.dates ? '<div class="dates"><span class="label">Compliance dates</span>' + it.dates.map(function (d) {
+            var past = new Date(d.date + "T23:59:59") < today;
+            return '<div class="daterow' + (past ? " past" : d.highlight ? " hl" : "") + '"><time datetime="' + d.date + '">' + fmtDate(d.date) + "</time><span>" + esc(d.label) + (past ? " (passed)" : "") + "</span></div>";
+          }).join("") + "</div>" : "") +
+          (it.sections.length ? '<div class="secs"><span class="label" style="align-self:center;margin-right:4px;">Sections</span>' + it.sections.map(function (id) {
+            return S.byId[id] ? '<button class="sec-link" data-sec="' + id + '">' + esc(S.byId[id].cite) + "</button>" : "";
+          }).join("") + "</div>" : "") +
+          '<details class="notices"><summary>Federal Register notices (' + it.notices.length + ")</summary><ul>" + it.notices.map(function (x) {
+            return '<li><span class="notice-date">' + x.date + '</span> <a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.type) + "</a></li>";
+          }).join("") + "</ul></details></article>";
+      }).join("");
+  }
+  $("#newsPage").addEventListener("click", function (e) {
+    var f = e.target.closest("[data-filter]"); if (f) { newsFilter = f.dataset.filter; renderNews(); return; }
+    var b = e.target.closest("[data-sec]"); if (b) openSection(b.dataset.sec);
+  });
+
+  // ---------- Saved ----------
+  function renderSaved() {
+    updateSavedCount();
+    var page = $("#savedPage");
+    var items = S.saved.filter(function (id) { return S.byId[id]; });
+    page.innerHTML = "<h1>Saved sections</h1>" +
+      '<p class="meta">Saved on this device only. Tap Save on any section to add it here.</p>' +
+      (items.length ? '<div class="saved-list">' + items.map(function (id) {
+        var s = S.byId[id];
+        return '<div class="saved-item"><div class="t"><span class="sec-num" style="color:var(--accent)">' + esc(s.cite) + "</span><span>" + esc(s.title) + "</span></div>" +
+          '<div style="display:flex;gap:8px;"><button class="btn" data-sec="' + id + '">Open</button><button class="btn" data-unsave="' + id + '">Remove</button></div></div>';
+      }).join("") + "</div>" : '<div class="callout">Nothing saved yet. Open a section and tap Save to keep it here.</div>');
+  }
+  $("#savedPage").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-sec]"); if (b) { openSection(b.dataset.sec); return; }
+    var u = e.target.closest("[data-unsave]"); if (u) { toggleSave(u.dataset.unsave); renderSaved(); }
+  });
+
+})();
+</script>
+
+</body>
+</html>

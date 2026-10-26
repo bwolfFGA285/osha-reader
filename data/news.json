@@ -1,0 +1,279 @@
+{
+  "lastChecked": "2026-10-26",
+  "textAsOf": "2026-10-22",
+  "items": [
+    {
+      "id": "hcs-2024",
+      "kind": "final",
+      "status": "In effect — compliance dates coming up",
+      "title": "Hazard Communication Standard update (GHS Rev. 7)",
+      "latest": "2026-02-13",
+      "sections": [
+        "1910.1200"
+      ],
+      "summary": "OSHA updated HazCom to match the newer GHS edition: changes to how chemicals are classified and what goes on labels and safety data sheets. In January 2026 OSHA pushed every compliance date back four months.",
+      "action": "Employers: by November 20, 2026, update any alternative workplace labels, the written HazCom program and employee training for newly identified hazards of substances. The same updates for mixtures are due by May 19, 2028. Watch for updated SDSs from suppliers.",
+      "dates": [
+        {
+          "label": "Substances: manufacturers and distributors",
+          "date": "2026-05-19"
+        },
+        {
+          "label": "Substances: all employers (labels, program, training)",
+          "date": "2026-11-20",
+          "highlight": true
+        },
+        {
+          "label": "Mixtures: manufacturers and distributors",
+          "date": "2027-11-19"
+        },
+        {
+          "label": "Mixtures: all employers (labels, program, training)",
+          "date": "2028-05-19"
+        }
+      ],
+      "notices": [
+        {
+          "date": "2026-02-13",
+          "type": "Correction",
+          "url": "https://www.federalregister.gov/documents/2026/02/13/C1-2026-00147/hazard-communication-standard-corrections"
+        },
+        {
+          "date": "2026-01-15",
+          "type": "Compliance dates extended four months",
+          "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00653/hazard-communication-standard"
+        },
+        {
+          "date": "2026-01-08",
+          "type": "Corrections and technical amendment",
+          "url": "https://www.federalregister.gov/documents/2026/01/08/2026-00147/hazard-communication-standard-corrections"
+        },
+        {
+          "date": "2024-10-09",
+          "type": "Corrections and technical amendment",
+          "url": "https://www.federalregister.gov/documents/2024/10/09/2024-23144/hazard-communication-standard"
+        },
+        {
+          "date": "2024-05-20",
+          "type": "Final rule (effective July 19, 2024)",
+          "url": "https://www.federalregister.gov/documents/2024/05/20/2024-08568/hazard-communication-standard"
+        }
+      ]
+    },
+    {
+      "id": "substance-respirators",
+      "kind": "proposed",
+      "status": "Proposed — comment record closed August 2026",
+      "title": "Respirator changes in substance-specific health standards",
+      "latest": "2026-07-28",
+      "sections": [
+        "1910.1001",
+        "1910.1003",
+        "1910.1017",
+        "1910.1018",
+        "1910.1025",
+        "1910.1027",
+        "1910.1028",
+        "1910.1029",
+        "1910.1043",
+        "1910.1044",
+        "1910.1045",
+        "1910.1047",
+        "1910.1048",
+        "1910.1050",
+        "1910.1051",
+        "1910.1052"
+      ],
+      "summary": "A set of proposals published July 1, 2025 would revise the respirator requirements written into individual substance standards (lead, asbestos, cadmium, benzene, formaldehyde, methylene chloride and others) so more respirator types can be used and the rules line up with the general Respiratory Protection standard, 1910.134. Public hearings began August 19, 2026, and the record was reopened for comments through late August 2026.",
+      "action": "Nothing to change yet. Relevant if your workplace uses any of these substances.",
+      "notices": [
+        {
+          "date": "2026-07-28",
+          "type": "Benzene: record reopened (comments to Aug 27, 2026)",
+          "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15227/benzene"
+        },
+        {
+          "date": "2026-07-22",
+          "type": "Lead and other standards: record reopened (comments to Aug 21, 2026)",
+          "url": "https://www.federalregister.gov/documents/2026/07/22/2026-14851/lead"
+        },
+        {
+          "date": "2026-06-03",
+          "type": "Notice of public hearings starting Aug 19, 2026",
+          "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11126/12-dibromo-3-chloropropane-1-3-butadiene-13-carcinogens-4-nitrobiphenyl-etc-acrylonitrile-asbestos"
+        },
+        {
+          "date": "2025-07-01",
+          "type": "Proposed rules (example: Lead)",
+          "url": "https://www.federalregister.gov/documents/2025/07/01/2025-11641/lead"
+        }
+      ]
+    },
+    {
+      "id": "wws-ladders",
+      "kind": "proposed",
+      "status": "Proposed — comments closed June 5, 2026",
+      "title": "Walking-Working Surfaces: fixed ladder deadline",
+      "latest": "2026-06-03",
+      "sections": [
+        "1910.28"
+      ],
+      "summary": "Would remove the November 18, 2036 deadline by which every fixed ladder over 24 feet must have a personal fall arrest system or ladder safety system. OSHA also asked whether to repeal or revise that requirement and keep allowing ladder cages and wells. It was included in the public hearings that began August 19, 2026.",
+      "action": "Nothing to change yet. Current rule still applies: ladders installed on or after November 19, 2018 need fall arrest or a ladder safety system.",
+      "notices": [
+        {
+          "date": "2026-06-03",
+          "type": "Included in public hearings",
+          "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11126/12-dibromo-3-chloropropane-1-3-butadiene-13-carcinogens-4-nitrobiphenyl-etc-acrylonitrile-asbestos"
+        },
+        {
+          "date": "2026-04-06",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06578/walking-working-surfaces"
+        }
+      ]
+    },
+    {
+      "id": "resp-medical",
+      "kind": "proposed",
+      "status": "Proposed — comments closed July 6, 2026",
+      "title": "Respiratory Protection: fewer medical evaluations for some respirators",
+      "latest": "2026-06-03",
+      "sections": [
+        "1910.134"
+      ],
+      "summary": "Would remove some medical evaluation requirements for two respirator types only: filtering facepiece respirators (such as N95s) and loose-fitting powered air-purifying respirators (PAPRs).",
+      "action": "Nothing to change yet. Keep doing medical evaluations as the current rule requires.",
+      "notices": [
+        {
+          "date": "2026-06-03",
+          "type": "Record reopened (comments to July 6, 2026)",
+          "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11093/amending-the-medical-evaluation-requirements-in-the-respiratory-protection-standard-for-certain"
+        },
+        {
+          "date": "2025-08-20",
+          "type": "Comment period extended",
+          "url": "https://www.federalregister.gov/documents/2025/08/20/2025-15912/amending-the-medical-evaluation-requirements-in-the-respiratory-protection-standard-for-certain"
+        },
+        {
+          "date": "2025-07-01",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2025/07/01/2025-12235/amending-the-medical-evaluation-requirements-in-the-respiratory-protection-standard-for-certain"
+        }
+      ]
+    },
+    {
+      "id": "color-code",
+      "kind": "proposed",
+      "status": "Proposed — comments closed September 2025",
+      "title": "Safety Color Code standard would be removed",
+      "latest": "2025-07-01",
+      "sections": [
+        "1910.144"
+      ],
+      "summary": "Would remove 1910.144 (red for fire equipment, danger and stop buttons; yellow for caution) from the regulations, along with color-code paragraphs in the textiles and sawmills standards.",
+      "action": "Nothing to change yet. If the rule is removed, employers can still keep their own color coding.",
+      "notices": [
+        {
+          "date": "2025-07-01",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2025/07/01/2025-11626/safety-color-code-for-marking-physical-hazards-textiles-sawmills-safety-color-code-for-marking"
+        }
+      ]
+    },
+    {
+      "id": "heat",
+      "kind": "proposed",
+      "status": "Proposed — hearing held; awaiting OSHA's next step",
+      "title": "New standard: Heat Injury and Illness Prevention (indoor and outdoor)",
+      "latest": "2025-09-25",
+      "sections": [],
+      "summary": "A proposed new standard that would require a written plan to evaluate and control heat hazards, for both indoor and outdoor work. A public hearing ran June 16 to July 2, 2025, and post-hearing comments closed October 30, 2025.",
+      "action": "Nothing required yet. If it becomes final, it would add a new section to Part 1910.",
+      "notices": [
+        {
+          "date": "2025-09-25",
+          "type": "Post-hearing comment period extended",
+          "url": "https://www.federalregister.gov/documents/2025/09/25/2025-18670/heat-injury-and-illness-prevention-in-outdoor-and-indoor-work-settings"
+        },
+        {
+          "date": "2024-11-29",
+          "type": "Comment period extended; hearing scheduled",
+          "url": "https://www.federalregister.gov/documents/2024/11/29/2024-27897/heat-injury-and-illness-prevention-in-outdoor-and-indoor-work-settings"
+        },
+        {
+          "date": "2024-08-30",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2024/08/30/2024-14824/heat-injury-and-illness-prevention-in-outdoor-and-indoor-work-settings"
+        }
+      ]
+    },
+    {
+      "id": "covid",
+      "kind": "proposed",
+      "status": "Proposed — comments closed November 2025",
+      "title": "COVID-19 healthcare standard would be removed",
+      "latest": "2025-08-20",
+      "sections": [
+        "1910.502"
+      ],
+      "summary": "Would remove the COVID-19 emergency temporary standard for healthcare settings (Subpart U) and its related recordkeeping and reporting provisions. Applies to healthcare settings only.",
+      "action": "Applies to healthcare settings only; no effect on other general industry workplaces.",
+      "notices": [
+        {
+          "date": "2025-08-20",
+          "type": "Comment period extended",
+          "url": "https://www.federalregister.gov/documents/2025/08/20/2025-15913/occupational-exposure-to-covid-19-in-healthcare-settings"
+        },
+        {
+          "date": "2025-07-01",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2025/07/01/2025-11625/occupational-exposure-to-covid-19-in-healthcare-settings"
+        }
+      ]
+    },
+    {
+      "id": "msd-column",
+      "kind": "withdrawn",
+      "status": "Withdrawn",
+      "title": "OSHA 300 Log: MSD column proposal withdrawn",
+      "latest": "2025-07-01",
+      "sections": [
+        "1904.7"
+      ],
+      "summary": "OSHA withdrew its proposal to add a column to the OSHA 300 Log for work-related musculoskeletal disorders. Recordkeeping duties, recording criteria and definitions are unchanged.",
+      "action": "No change to how the 300 Log is kept.",
+      "notices": [
+        {
+          "date": "2025-07-01",
+          "type": "Withdrawal of proposed rule",
+          "url": "https://www.federalregister.gov/documents/2025/07/01/2025-11624/occupational-injury-and-illness-recording-and-reporting-requirements-withdrawal"
+        }
+      ]
+    },
+    {
+      "id": "emergency-response",
+      "kind": "proposed",
+      "status": "Proposed — hearing held November 2024",
+      "title": "New Emergency Response standard to replace Fire Brigades",
+      "latest": "2024-07-23",
+      "sections": [
+        "1910.156"
+      ],
+      "summary": "Would replace the Fire Brigades standard with a broader Emergency Response standard covering more types of emergency responders. Mainly matters to employers who run their own fire brigade or emergency response team.",
+      "action": "Relevant only if your workplace has its own fire brigade or emergency response team.",
+      "notices": [
+        {
+          "date": "2024-07-23",
+          "type": "Public hearing scheduled",
+          "url": "https://www.federalregister.gov/documents/2024/07/23/2024-16126/emergency-response-standard"
+        },
+        {
+          "date": "2024-02-05",
+          "type": "Proposed rule",
+          "url": "https://www.federalregister.gov/documents/2024/02/05/2023-28203/emergency-response-standard"
+        }
+      ]
+    }
+  ]
+}
